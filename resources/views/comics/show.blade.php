@@ -49,35 +49,7 @@
   <section class="footer-info-comic">
     <div class="container">
       <div class="row g-5">
-        <div class="col">
-          <h4>Talent</h4>
-          <div class="row border-y">
-            <div class="col-4">
-              <h6>Art by:</h6>
-            </div>
-            <div class="col">
-              @foreach ($comic['artists'] as $artist)
-              <a href="#">
-                {{$artist}}{{$loop->index != count($comic['artists']) - 1 ? ',' : ''}}
-              </a>
-              @endforeach
-            </div>
-          </div>
-          <div class="row border-y">
-            <div class="col-4">
-              <h6>Written by:</h6>
-            </div>
-            <div class="col">
-              @foreach ($comic['writers'] as $writer)
-              <a href="#">
-                {{$writer}}
-                {{$loop->index != count($comic['writers']) - 1 ? ',' : ''}}
-              </a>
-              @endforeach
-            </div>
-          </div>
-        </div>
-        <div class="col">
+        <div class="col-6">
           <h4>Specs</h4>
           <div class="row border-y">
             <div class="col-4">

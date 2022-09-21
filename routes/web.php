@@ -19,15 +19,7 @@ Route::get('/', function () {
 })->name('home');
 
 // Comics
-Route::get('/comics', function () {
-    return view('comics.index');
-})->name('comics.index');
-
-Route::get('/comics/{id}', function ($id) {
-    $comics = config('comics');
-    $comic = $comics[$id];
-    return view('comics.show', compact('comic'));
-})->name('comics.show');
+Route::resource('comics', 'ComicController');
 
 // Characters
 Route::get('/characters', function () {
