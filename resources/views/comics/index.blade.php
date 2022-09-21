@@ -6,7 +6,7 @@
     <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
       @foreach($comics as $comic)
       <div class="col">
-        <a class="text-white" href="{{route('comics.show', ['comic' => $loop->index])}}">
+        <a class="text-white" href="{{route('comics.show', $comic)}}">
           <img class="comic-img" src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
           <p>{{$comic['title']}}</p>
         </a>

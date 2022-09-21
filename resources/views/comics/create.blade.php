@@ -32,7 +32,7 @@
       </div>
       <div class="col-6">
         <label for="price">Prezzo:</label>
-        <input type="number" class="form-control" name="price" id="price" min="0" step="any">
+        <input type="text" class="form-control" name="price" id="price" value="$">
       </div>
       <div class="col-6">
         <a class="btn btn-secondary" href="{{route('comics.index')}}">Torna ai comics</a>
