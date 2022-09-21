@@ -1,0 +1,170 @@
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Segoe UI", "Open Sans", Helvetica, sans-serif;
+  background-color: #0E0E0E;
+  color: #fff;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.row .border-y {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+header {
+  background-color: #fff;
+}
+header nav {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  justify-content: space-between;
+}
+header nav .col-link a {
+  color: #707070;
+  text-transform: uppercase;
+  margin-left: 25px;
+  font-size: 12px;
+  height: 100%;
+  line-height: 90px;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  display: inline-block;
+}
+header nav .col-link a.active, header nav .col-link a:hover {
+  color: #0082F9;
+  border-bottom: 3px solid #0082F9;
+}
+header img {
+  height: 100%;
+  padding: 10px;
+}
+header ul li {
+  display: inline-block;
+}
+
+.jumbotron {
+  height: 350px;
+  background-image: url("../images/jumbotron.jpg");
+  background-position: top center;
+}
+
+.comic-img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.middle-text {
+  position: absolute;
+  background-color: #0082F9;
+  padding: 4px 8px;
+  top: -68px;
+}
+
+.blue-layout {
+  height: 80px;
+  background-color: #0082F9;
+}
+.blue-layout .thumb {
+  position: absolute;
+  top: -230px;
+}
+
+.main-info-comic {
+  background-color: #FFF;
+  color: black;
+  padding: 50px 0;
+}
+.main-info-comic .title {
+  text-transform: uppercase;
+}
+.main-info-comic .info-status {
+  background-color: #55BA58;
+  margin: 15px auto;
+  border: 1px solid black;
+  color: white;
+}
+.main-info-comic .info-status .c-green {
+  color: #ADFA90;
+}
+.main-info-comic .info-status .row {
+  padding: 12px 18px;
+}
+.main-info-comic .info-status .border-right {
+  border-right: 1px solid black;
+}
+
+.footer-info-comic {
+  background-color: #F6F6F6;
+  color: #003F5D;
+  padding: 50px 0;
+}
+.footer-info-comic a {
+  font-size: 13px;
+}
+
+.footer-bottom {
+  background-color: #303030;
+}
+.footer-bottom nav {
+  padding: 20px 0;
+}
+.footer-bottom nav .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-bottom nav .row .col-right {
+  display: flex;
+  align-items: center;
+}
+.footer-bottom h4 {
+  color: #0082F9;
+}
+.footer-bottom ul {
+  display: flex;
+}
+.footer-bottom ul li {
+  margin-left: 20px;
+}
+.footer-bottom a.btn {
+  font-size: 14px;
+  padding: 10px 15px;
+  color: #fff;
+  border: 1px solid #0082F9;
+}
+
+.footer-top {
+  background-image: url("../images/footer-bg.jpg");
+}
+.footer-top .col-img {
+  background-image: url("../images/dc-logo-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.footer-top h4 {
+  margin: 15px 0;
+}
+.footer-top ul {
+  padding: 0;
+}
+.footer-top ul li a {
+  font-size: 12px;
+  color: #6F7E85;
+}

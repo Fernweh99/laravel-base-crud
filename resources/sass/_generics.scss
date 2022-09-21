@@ -1,0 +1,26 @@
+// Generics
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Segoe UI", "Open Sans", Helvetica, sans-serif;;
+  background-color: #0E0E0E;
+  color: #fff;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.row {
+  .border-y {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+}
