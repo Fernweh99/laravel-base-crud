@@ -13,5 +13,8 @@
       </div>
       @endforeach
     </div>
+    <div class="text-center">
+      <a class="btn btn-primary" href="{{route('comics.create')}}">Aggiungi</a>
+    </div>
   </div>
 @endsection
