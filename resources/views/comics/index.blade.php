@@ -10,6 +10,11 @@
           <img class="comic-img" src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
           <p>{{$comic['title']}}</p>
           <a class="btn btn-primary" href="{{route('comics.edit', $comic)}}">Modifica</a>
+          <form action="{{route('comics.destroy', $comic)}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <input class="btn btn-danger" type="submit" value="Cancella">
+          </form>
         </a>
       </div>
       @endforeach
