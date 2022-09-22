@@ -73,5 +73,6 @@
       </nav>
     </div>
   </footer>
+  @yield('more-js')
 </body>
 </html>

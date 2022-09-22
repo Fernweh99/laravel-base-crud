@@ -22,7 +22,7 @@
               </a>
             </div>
             <div class="col">
-              <form action="{{route('comics.destroy', $comic)}}" method="POST">
+              <form class="delete-form" action="{{route('comics.destroy', $comic)}}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger" type="submit">
@@ -40,4 +40,17 @@
       <a class="btn btn-primary" href="{{route('comics.create')}}">Aggiungi</a>
     </div>
   </div>
+@endsection
+@section('more-js')
+  <script>
+    const deleteForms = document.querySelectorAll('.delete-form');
+    deleteForms.forEach(form => {
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        const hasConfirmation = confirm('Sei sicuro di voler eliminare questo fumetto?');
+
+        if (hasConfirmation) form.submit();
+      });
+    });
+  </script>
 @endsection
