@@ -5,6 +5,17 @@
   object-position: top;
 }
 
+.btn-comic {
+  position: absolute;
+  top: 32%;
+  padding: 0 12px;
+  display: none;
+}
+
+.comic:hover .btn-comic {
+  display: flex;
+}
+
 .middle-text {
   position: absolute;
   background-color: #0082F9;

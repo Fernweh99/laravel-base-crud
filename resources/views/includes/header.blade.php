@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{asset('css/app.css')}}">
   <link rel="icon" href="{{asset('images/dc-logo.png')}}" sizes="16x16">
+  @yield('more-links')
   <title>Dc Comics | @yield('head-title')</title>
 </head>
 <body>

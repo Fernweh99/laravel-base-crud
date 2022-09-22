@@ -1,20 +1,37 @@
 @extends('layout.main')
+@section('more-links')
+<script src="https://kit.fontawesome.com/7ff5ce46be.js" crossorigin="anonymous"></script>
+@endsection
 @section('head-title', 'Comics')
 @section('main-content')
   <div class="container my-5 position-relative">
     <h3 class="middle-text">CURRENT SERIES</h3>
     <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
       @foreach($comics as $comic)
-      <div class="col">
-        <a class="text-white" href="{{route('comics.show', $comic)}}">
-          <img class="comic-img" src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
+      <div class="col position-relative comic">
+        <img class="comic-img" src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
+        <div class="btn-comic row">
+            <div class="col">
+              <a class="btn btn-primary" href="{{route('comics.show', $comic)}}">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+              </a>
+            </div>
+            <div class="col">
+              <a class="btn btn-primary" href="{{route('comics.edit', $comic)}}">
+                <i class="fa-regular fa-pen-to-square"></i>
+              </a>
+            </div>
+            <div class="col">
+              <form action="{{route('comics.destroy', $comic)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger" type="submit">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </form>
+            </div>
+          </div>
           <p>{{$comic['title']}}</p>
-          <a class="btn btn-primary" href="{{route('comics.edit', $comic)}}">Modifica</a>
-          <form action="{{route('comics.destroy', $comic)}}" method="POST">
-            @csrf
-            @method('DELETE')
-            <input class="btn btn-danger" type="submit" value="Cancella">
-          </form>
         </a>
       </div>
       @endforeach
