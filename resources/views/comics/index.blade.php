@@ -9,6 +9,7 @@
         <a class="text-white" href="{{route('comics.show', $comic)}}">
           <img class="comic-img" src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
           <p>{{$comic['title']}}</p>
+          <a class="btn btn-primary" href="{{route('comics.edit', $comic)}}">Modifica</a>
         </a>
       </div>
       @endforeach
